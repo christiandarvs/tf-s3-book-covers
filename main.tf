@@ -10,7 +10,7 @@ resource "aws_s3_object" "jp-tlw" {
   bucket       = aws_s3_bucket.main.id
   content_type = "image/jpeg"
   key          = "book-covers/jp-tlw.jpg"
-  source       = "${path.module}/book-covers/jp-tlw.jpg"
+  source       = "${path.module}/book-covers/nfu.jpg"
 }
 
 resource "aws_s3_object" "tsp" {
