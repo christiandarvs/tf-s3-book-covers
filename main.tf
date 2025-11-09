@@ -10,6 +10,13 @@ resource "aws_s3_object" "jp-tlw" {
   bucket       = aws_s3_bucket.main.id
   content_type = "image/jpeg"
   key          = "book-covers/jp-tlw.jpg"
+  source       = "${path.module}/book-covers/jp-tlw.jpg"
+}
+
+resource "aws_s3_object" "nfu" {
+  bucket       = aws_s3_bucket.main.id
+  content_type = "image/jpeg"
+  key          = "book-covers/nfu.jpg"
   source       = "${path.module}/book-covers/nfu.jpg"
 }
 
@@ -18,6 +25,13 @@ resource "aws_s3_object" "tsp" {
   content_type = "image/jpeg"
   key          = "book-covers/tsp.jpg"
   source       = "${path.module}/book-covers/tsp.jpg"
+}
+
+resource "aws_s3_object" "mos" {
+  bucket       = aws_s3_bucket.main.id
+  content_type = "image/jpeg"
+  key          = "book-covers/mos.jpg"
+  source       = "${path.module}/book-covers/mos.jpg"
 }
 
 resource "aws_s3_object" "book_json" {
